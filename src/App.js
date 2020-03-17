@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PermanentDrawerLeft from './components/CartDrawer'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <PermanentDrawerLeft></PermanentDrawerLeft>
       </header>
     </div>
   );
