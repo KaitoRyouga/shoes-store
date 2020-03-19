@@ -7,6 +7,10 @@ html,body{
 	height:100%;
 	font-family: 'Baloo 2', cursive;
 }
+.bg--dark{
+	background-color: #181818;
+	transition: 0.6s;
+}
 /*header*/
 .container-fluid{
 	width:100%;
@@ -111,12 +115,36 @@ div.slide{
 	width:100%;
 	height:90%;
 }
+.active-title{
+	position: absolute;
+	right:0%;
+	top:20%;
+}
+.sub-title{
+	color:white;
+	text-transform: uppercase;
+	font-size: 40px;
+}
+.main-title{
+	color:white;
+	text-transform: uppercase;
+	font-size:60px;
+}
 /* content */
 .bg-news{
 	background-image: url(../img/title/bg-blog.webp);
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+}
+.bg-subscribe{
+	width:100%;
+	height:400px;
+	background-image: url('../img/product/bg-newsletter-v1.webp');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
 }
 /*footer*/
 footer{
