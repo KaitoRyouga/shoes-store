@@ -1,6 +1,6 @@
 *{
-	margin:0;
 	padding:0;
+	margin:0;
 }
 html,body{
 	width: 100%;
@@ -13,13 +13,17 @@ html,body{
 }
 /*header*/
 .container-fluid{
-	width:100%;
+	width:100% !important;
 	padding:0;
+	height: auto;
+	margin:auto;
 }
 div.slide{
 	width:100%;
 	height:90vh;
 	background-image: url('../img/title/bg-slideshow-v1.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
 
 }
@@ -107,6 +111,7 @@ div.slide{
     z-index: -1;
 }
 .introduce-product{
+	width:100%;
 }
 .col-sm-8,.col-sm-4,.col-sm-6{
 	padding:0;
@@ -170,6 +175,56 @@ div.slide{
 	align-items: center;
 	background-attachment: fixed;
 }
+.introduce-product__type1{
+	position: relative;
+	overflow:hidden;
+  	box-sizing: border-box;
+}
+.introduce-product__text1{
+	position: absolute;
+	left: 50%;
+	bottom:20%;
+	transform: translate(-50%,-20%);
+	text-align: center;
+	color:black;
+}
+.introduce-product__text1 h2{
+	font-weight: bold;
+	font-size: 35px;
+}
+.introduce-product__text1 h3{
+	font-size: 20px;
+}
+.introduce-product__text2{
+	position: absolute;
+	left: 10%;
+	top:20%;
+	text-align: center;
+	color:white;
+}
+.introduce-product__text2 h2, .introduce-product__text3 h2{
+	font-size: 50px;
+}
+.introduce-product__text2 h3, .introduce-product__text3 h3{
+	font-size: 30px;
+}
+.introduce-product__text3{
+	position: absolute;
+	right: 10%;
+	bottom:20%;
+	text-align: center;
+	color:white;
+}
+.hover-scale{
+	width: 100%;
+	height: auto;
+	transition: 2s;
+	overflow: hidden;
+}
+.introduce-product__type1:hover .hover-scale{
+	transition: 2s;
+	transform: scale(1.05);
+}
 /*footer*/
 footer{
 	background: #222222;
@@ -231,10 +286,14 @@ footer{
 /*end footer*/
 /* animation */
 .main-title-go-to-left{
-	animation: main-title-go-to-left 2s forwards;
+	animation-name: main-title-go-to-left;
+	animation-fill-mode: forwards;
+	animation-duration: 2s;
 }
 .sub-title-go-to-down{
-	animation: sub-title-go-to-down 2s forwards;
+	animation-name: sub-title-go-to-down;
+	animation-fill-mode: forwards;
+	animation-duration: 2s;
 }
 .shose-animation{
 	animation-name: shose-animation;
@@ -243,14 +302,18 @@ footer{
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in;
 }
-@-webkit-keyframes shose-go-to-right{
+.button-go-to-up{
+	animation-name: button-go-to-up;
+	animation-duration: 2s;
+}
+@-webkit-keyframes button-go-to-up{
 	0%{
 		opacity: 0;
-		transform: translateX(-300px);
+		transform: translateY(50px);
 	}
 	100%{
 		opacity: 1;
-		transform: translateX(0px);
+		transform: translateY(0px);
 	}
 }
 @-webkit-keyframes main-title-go-to-left{
