@@ -17,6 +17,7 @@ html,body{
 	padding:0;
 	height: auto;
 	margin:auto;
+	overflow: hidden;
 }
 div.slide{
 	width:100%;
@@ -25,7 +26,6 @@ div.slide{
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-
 }
 .slide__img{
 	position: absolute;
@@ -115,6 +115,7 @@ div.slide{
 }
 .col-sm-8,.col-sm-4,.col-sm-6{
 	padding:0;
+	
 }
 .introduce-product img{
 	width:100%;
@@ -164,11 +165,11 @@ div.slide{
 	color:black;
 }
 /* content */
-.bg-news{
-	background-image: url(../img/title/bg-blog.webp);
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+.bg-news, .news-detail{
+	background: #F5F5F5;
+}
+.news-detail div.card{
+	background: #F5F5F5;
 }
 .bg-subscribe{
 	width:100%;
@@ -278,8 +279,20 @@ div.slide{
 	color:red;
 	font-weight: bold;
 }
-.card-news{
-	background: #f1e4e4;
+.title-news h3{
+	color: #01913F;
+	font-size: 35px;
+}
+.news-detail a{
+	text-decoration: none;
+}
+.news-detail-title{
+	color:black;
+	transition: 0.6s;
+}
+.news-detail-title:hover {
+	color:#F29B25;
+	transition: 0.6s;
 }
 /*footer*/
 footer{
@@ -435,5 +448,51 @@ footer{
 	}
 	100%{
 		transform: translateY(0px);
+	}
+}
+/*media query*/
+@media only screen and (max-width: 1250px) {
+	.sub-title{
+		font-size: 35px;
+	}
+	.main-title{
+		font-size:50px;
+	}
+	div.slide{
+	width:100%;
+	height:85vh;
+	}
+}
+@media only screen and (max-width: 950px) {
+	.sub-title{
+		font-size: 30px;
+	}
+	.main-title{
+		font-size:43px;
+	}
+	div.slide{
+	width:100%;
+	height:80vh;
+	}
+
+}
+@media only screen and (max-width: 690px) {
+	.sub-title{
+		font-size: 20px;
+	}
+	.main-title{
+		font-size:30px;
+	}
+	div.slide{
+	width:100%;
+	height:70vh;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.sub-title{
+		font-size: 35px;
+	}
+	.main-title{
+		font-size:37px;
 	}
 }

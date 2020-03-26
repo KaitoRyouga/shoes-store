@@ -8,7 +8,7 @@ $(document).ready(function () {
         else {
          $('.navbar-expand-lg').addClass('bg-transparent').addClass('navbar-light').removeClass('bd--dark').removeClass('navbar-light');
       }
-        if(pos_body >200){
+        if(pos_body >201){
             $('.return-top').addClass('active-return');
         }else{
             $('.return-top').removeClass('active-return');
