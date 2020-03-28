@@ -1,28 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import PermanentDrawerLeft from './components/CartDrawer'
+import React, { Component } from 'react';
+import Header from './Component/Header';
+import Content from './Component/Content';
+import Footer from './Component/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <PermanentDrawerLeft></PermanentDrawerLeft>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className = "chuatatca">
+        {/* start */}
+        {/* header: navbar, slide */}
+        <Header />
+        {/* end header */}
+        {/* content */}
+        {/* content: bannerv1, product , discount , bannerv2 ,subscribe ,returntop */}
+        <Content />
+        {/* end content */}
+        {/* footer : footer-above, footer-below */}
+        <Footer />
+        {/* end footer */}
+        {/* end */}
+      </div>
+    );
+  }
 }
 
 export default App;
